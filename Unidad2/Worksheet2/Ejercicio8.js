@@ -1,0 +1,1 @@
+document.write("<img src=\"imagen"+Math.floor(Math.random()*3+1)+".jpg\">");
