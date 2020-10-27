@@ -11,34 +11,38 @@ decidas)
     Borrar por completo el canvas (con un botón).
 */
 
+// Esto podría llamarse main, porque se ejecuta cuando termina de cargarse el body
 function pintarTablayBoton() {
     // Pintamos la tabla y el botón
-    document.write("<table>");
-    for (let i = 0; i < 4; i++) {
-        document.write("<tr>");
-        for (let j = 0; j < 4; j++) {
-            document.write("<td height=\"100\" width=\"100\" style=\"border: 1px solid black;\"></td>");
+    let tabla = "";
+    tabla += "<table style=\"border-collapse: collapse; border: 1px solid black;\">";
+    for (let i = 0; i < 100; i++) {
+        tabla += "<tr>";
+        for (let j = 0; j < 100; j++) {
+            tabla += "<td height=\"2\" width=\"2\"></td>";
         }
-        document.write("</tr>");
+        tabla += "</tr>";
     }
-    document.write("</table><br>");
-    document.write("<button id=\"botonBorrar\">Borrar todo</button>");
+    tabla += "</table>";
+    document.getElementById("tabla").innerHTML = tabla;
+
+    document.getElementById("tabla").innerHTML += "<br><button id=\"botonBorrar\">Borrar todo</button>";
 
     // Añadimos Event Listener a las celdas y al botón
     let celdas = document.querySelectorAll("td");
     celdas.forEach(celda => {
         celda.addEventListener("mousemove", pintarCelda);
     });
-    document.querySelector("#botonBorrar").addEventListener("click", borrarTodo);
+    document.getElementById("botonBorrar").addEventListener("click", borrarTodo);
 }
 
 function pintarCelda(e) {
     if (e.ctrlKey) {
-        e.explicitOriginalTarget.style.backgroundColor = "red";
+        e.target.style.backgroundColor = "red";
     } else if (e.shiftKey) {
-        e.explicitOriginalTarget.style.backgroundColor = "blue";
+        e.target.style.backgroundColor = "blue";
     } else if (e.buttons == 1) {
-        e.explicitOriginalTarget.style.backgroundColor = "white";
+        e.target.style.backgroundColor = "white";
     }
 }
 
@@ -49,4 +53,4 @@ function borrarTodo() {
     }
 }
 
-window.addEventListener("load", pintarTablayBoton());
+window.addEventListener("load", pintarTablayBoton);
