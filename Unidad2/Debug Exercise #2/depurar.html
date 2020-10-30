@@ -1,25 +1,28 @@
 <html>
-    <head>
-        <title>WorkSheet 4.1 - Ejercicio 3</title>
-        <meta charset="utf-8" />
-        <style>
 
-            #mapa {
-                height: 60%;
-                width: 50%;
-                align-content: center;
-            } 
-        </style>
-    </head>
-    <body>
-        <div id="content"></div>
-        <div id="direccion"></div>
-        <div id="mapa"></div>
-        <noscript>
-            <p>No soporta JavaScript</p>
-        </noscript>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TgWcDwu0TpbN-xE3U-XO0XZlTbEjTbU"
-        async defer></script>
-        <script type="text/javascript" src="ejercicio3.js"></script>
-    </body>
+<head>
+    <title>WorkSheet 4.1 - Ejercicio 3</title>
+    <meta charset="utf-8" />
+    <style>
+        #mapa {
+            height: 60%;
+            width: 50%;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenido"></div>
+    <div id="direccion"></div>
+    <div id="mapa"></div>
+    <noscript>
+        <p>No soporta JavaScript</p>
+    </noscript>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqeopgt2bGsOvm95ZZTBSauubrZdlMOE&callback=ejercicio3&libraries=&v=weekly" async
+        defer></script>
+    <script type="text/javascript" src="ejercicio3.js"></script>
+</body>
+
 </html>
