@@ -10,3 +10,8 @@ Enunciados de los ejercicios: https://github.com/jpineroberbel/Desarrollo-Web-en
 - Unidad 2. Objetos globales de JavaScript
 - Unidad 3. Funciones, arrays y objetos
 - Unidad 4. Eventos y formularios
+
+## Proyectos
+- The Reading List: Lista de lectura. Proyecto para utilizar eventos, clases y objetos. Maquetado con Bootstrap.
+    - [GitHub Repo](https://github.com/Trucosuso/MyReadingList)
+    - Enlace a versión online: https://trucosuso.github.io/MyReadingList
