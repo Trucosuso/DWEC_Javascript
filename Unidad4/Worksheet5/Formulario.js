@@ -78,7 +78,7 @@ function comprobarEmail(e) {
  */
 function comprobarUsuario(e) {
     /** @type {RegExp} */
-    let expresion = /^(?=.*[A-Za-zÑñ])(?=.*\d)(?=.*[,;.:'"«»()[\]{}¿?¡!\-])[A-Za-zÑñ\d,;.:'"«»()[\]{}¿?¡!\-@^_+|~`<>/$%*#&]{8,}$/;
+    let expresion = /^(?=.*[A-Za-zÑñ])(?=.*\d)(?=.*[,;.:'"«»()[\]{}¿?¡!-])[A-Za-zÑñ\d,;.:'"«»()[\]{}¿?¡!\-@^_+|~`<>/$%*#&]{8,}$/;
 
     if (!expresion.test(e.currentTarget.value)) {
         e.currentTarget.setCustomValidity("Introduzca un usuario de al menos 8 caracteres, un número y un signo de puntuacion");
